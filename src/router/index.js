@@ -1,11 +1,35 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Home from '../components/Home.vue'
+import Welcome from './../components/Welcome.vue'
+import Login from './../components/Login.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    meta: {
+      title: '首页'
+    },
+    component: Home,
+    redirect: '/welcome',
+    children: [
+      {
+        name: 'welcome',
+        path: '/welcome',
+        meta: {
+          title: '欢迎页'
+        },
+        component: Welcome
+      },
+      {
+        name: 'login',
+        path: '/login',
+        meta: {
+          title: '登录'
+        },
+        component: Login
+      }
+    ]
   },
   {
     path: '/about',
@@ -19,7 +43,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 })
 
