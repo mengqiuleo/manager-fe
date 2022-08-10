@@ -1,7 +1,7 @@
 /*
  * @Author: Pan Jingyi
  * @Date: 2022-08-10 00:38:53
- * @LastEditTime: 2022-08-11 01:02:27
+ * @LastEditTime: 2022-08-11 02:42:48
  */
 import axios from 'axios'
 import config from './../config'
@@ -25,7 +25,7 @@ service.interceptors.response.use((res) => {
   const { code, data, msg } = res.data
   if (code === 200) {
     return data
-  } else if (code === 40001) {
+  } else if (code === 50001) {
     ElMessage.error(TOKEN_INVALID)
     setTimeout(() => {
       router.push('/login')

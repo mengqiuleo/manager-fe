@@ -5,7 +5,7 @@
 const env = process.env.NODE_ENV || 'prod'
 const EnvConfig = {
   development: {
-    baseApi: '/',
+    baseApi: '/api',
     mockApi:
       'https://www.fastmock.site/mock/3579b457727b5e8f2f27b05eb3ca67eb/api'
   },
@@ -18,7 +18,7 @@ const EnvConfig = {
 
 export default {
   env,
-  mock: true,
+  mock: false,
   namespace: 'manager',
   ...EnvConfig[env]
 }
