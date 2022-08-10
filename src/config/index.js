@@ -1,3 +1,7 @@
+/*
+ * @Author: Pan Jingyi
+ * @Date: 2022-08-09 23:23:49
+ */
 const env = process.env.NODE_ENV || 'prod'
 const EnvConfig = {
   development: {
@@ -15,5 +19,6 @@ const EnvConfig = {
 export default {
   env,
   mock: true,
+  namespace: 'manager',
   ...EnvConfig[env]
 }
