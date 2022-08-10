@@ -1,7 +1,10 @@
+/*
+ * @Author: Pan Jingyi
+ * @Date: 2022-08-09 03:09:50
+ * @LastEditTime: 2022-08-10 23:04:43
+ */
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../components/Home.vue'
-import Welcome from './../components/Welcome.vue'
-import Login from './../components/Login.vue'
 
 const routes = [
   {
@@ -19,26 +22,17 @@ const routes = [
         meta: {
           title: '欢迎页'
         },
-        component: Welcome
-      },
-      {
-        name: 'login',
-        path: '/login',
-        meta: {
-          title: '登录'
-        },
-        component: Login
+        component: () => import('./../views/Welcome.vue')
       }
     ]
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    name: 'login',
+    path: '/login',
+    meta: {
+      title: '登录'
+    },
+    component: () => import('./../views/Login.vue')
   }
 ]
 

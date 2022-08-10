@@ -1,3 +1,8 @@
+/*
+ * @Author: Pan Jingyi
+ * @Date: 2022-08-10 00:38:53
+ * @LastEditTime: 2022-08-11 01:02:27
+ */
 import axios from 'axios'
 import config from './../config'
 import { ElMessage } from 'element-plus'
@@ -36,6 +41,9 @@ function request(options) {
   options.method = options.method || 'get'
   if (options.method.toLowerCase() === 'get') {
     options.params = options.data
+  }
+  if (typeof options.mock != 'undefined') {
+    config.mock = options.mock
   }
   if (config.env === 'production') {
     service.defaults.baseURL = config.baseApi
