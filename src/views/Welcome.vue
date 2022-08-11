@@ -1,12 +1,18 @@
 <!--
  * @Author: Pan Jingyi
  * @Date: 2022-08-09 22:43:42
- * @LastEditTime: 2022-08-10 20:20:37
+ * @LastEditTime: 2022-08-11 03:24:23
 -->
 <template>
   <div class="welcome">
-    <h1>欢迎来到welcome界面</h1>
-    <router-link to="/login">去登录</router-link>
+    <div class="content">
+      <div class="sub-title">欢迎体验</div>
+      <div class="title">通用后台管理系统</div>
+      <div class="desc">
+        - Vue3 + ElementPlus + Node + Mongo打造通用后台管理系统
+      </div>
+    </div>
+    <div class="img"></div>
   </div>
 </template>
 
@@ -16,4 +22,36 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .content {
+    position: relative;
+    bottom: 40px;
+    .sub-title {
+      font-size: 30px;
+      line-height: 42px;
+      color: #333;
+    }
+    .title {
+      font-size: 40px;
+      line-height: 62px;
+      color: #409eff;
+    }
+    .desc {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+    }
+  }
+  .img {
+    margin-left: 105px;
+    background-image: url('./../assets/images//welcome.png');
+    width: 371px;
+    height: 438px;
+  }
+}
+</style>
