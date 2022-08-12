@@ -1,7 +1,7 @@
 <!--
  * @Author: Pan Jingyi
  * @Date: 2022-08-09 03:09:50
- * @LastEditTime: 2022-08-11 18:40:44
+ * @LastEditTime: 2022-08-12 00:06:05
 -->
 <template>
   <div class="basic-layout">
@@ -55,9 +55,7 @@
         </div>
       </div>
       <div class="wrapper">
-        <div class="main-page">
-          <router-view></router-view>
-        </div>
+        <router-view></router-view>
       </div>
     </div>
   </div>

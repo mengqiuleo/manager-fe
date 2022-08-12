@@ -1,7 +1,7 @@
 <!--
  * @Author: Pan Jingyi
  * @Date: 2022-08-09 22:43:42
- * @LastEditTime: 2022-08-11 03:24:23
+ * @LastEditTime: 2022-08-12 00:06:40
 -->
 <template>
   <div class="welcome">
@@ -28,6 +28,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
+  background-color: #fff;
   .content {
     position: relative;
     bottom: 40px;

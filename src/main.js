@@ -25,4 +25,5 @@ for (let iconName in ElIconModules) {
 app.config.globalProperties.$request = request
 app.config.globalProperties.$storage = storage
 app.config.globalProperties.$api = api
+
 app.use(ElementPlus).use(store).use(router).mount('#app')

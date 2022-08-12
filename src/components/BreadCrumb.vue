@@ -1,10 +1,10 @@
 <!--
  * @Author: Pan Jingyi
  * @Date: 2022-08-11 18:35:12
- * @LastEditTime: 2022-08-11 18:51:28
+ * @LastEditTime: 2022-08-12 03:06:53
 -->
 <template>
-  <el-breadcrumb :separator-icon="ArrowRight">
+  <el-breadcrumb separator-icon="ArrowRight">
     <el-breadcrumb-item v-for="(item, index) in breadList" :key="item.path">
       <router-link to="/welcome" v-if="index == 0">{{
         item.meta.title
